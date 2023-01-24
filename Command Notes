@@ -1,0 +1,81 @@
+mix run priv/repo/playground.exs  == command used to run the file
+
+mix new my_new_project   == creates a new fresh elixir project
+
+iex -S mix   == to start iex shell of that particular project then iex> will open 
+
+iex > recompile  == recompile is used to compile the code that is like nodemon
+
+
+
+
+Phoenix command == New Project Setup
+mix phx.new discuss   == generates new project
+cd discuss
+mix ecto.create    == Databse for our app has been created.
+
+mix phx.server  == Start your phoenix app
+
+iex -S mix phx.server == Run our phoenix app inside iex
+
+
+IO.inspect(label: From Line7)
+
+Ecto Tutorial
+
+mix
+mix deps.get
+mix ecto.create
+mix ecto.gen.migration create_user  == creates migration for user table in priv folder
+mix ecto.migrate  == creates migration pushes schema to DB server from priv
+mix ecto.rollback == undo the last migration
+
+Doubts :
+
+What is fragment in query second chapter.
+
+
+[error] `inotify-tools` is needed to run `file_system` for your system, check https://github.com/rvoicilas/inotify-tools/wiki for more information about how to install it. If it's already installed but not be found, appoint executable file with `config.exs` or `FILESYSTEM_FSINOTIFY_EXECUTABLE_FILE` env.
+[warning] Could not start Phoenix live-reload because we cannot listen to the file system.
+You don't need to worry! This is an optional feature used during development to
+refresh your browser when you save files and it does not affect production.
+
+
+
+
+
+
+Commands for Generating a new phx form file
+
+mix phx.new Playerform
+cd playerform
+git init
+git add .
+git commit -m "..........."
+mix ecto.create
+mix ecto.setup
+mix phx.gen.live SampleForm Test tests name:string age:integer # SampleForm == Accounts; tests==table/schema
+after that copy paste links in router.ex file
+mix ecto.migrate
+mix phx.server
+
+
+
+Terminal Commands
+curl localhost:4000  == to check what is running on our server
+
+
+
+
+Important functions used frequently : 
+
+Enum.reduce  // specifically used to change the datastructure that we are getting
+iex(18)> mymap = [{1, %{first: "second", third: "fourth"}}, {2,%{first: "sixth", seventh: "eight"}}]
+[
+  {1, %{first: "second", third: "fourth"}},
+  {2, %{first: "sixth", seventh: "eight"}}
+]
+iex(19)> Enum.reduce(mymap, acc, fn{_, vertex}, acc -> Map.put(acc, vertex.first, "one")end)        
+%{"second" => "one", "sixth" => "one"}
+
+

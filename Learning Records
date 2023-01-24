@@ -1,0 +1,52 @@
+Learnings:
+
+9 JAN
+slots in phoenix liveview
+
+
+Map.keys(%{a: 1, b: 2}) ------ Map.keys list all the keys in the map given used in @types
+[:a, :b]
+
+Map.put(%{a: 1}, :b, 2)  ---- Puts the key value in existing map that is passed
+%{a: 1, b: 2}
+
+     <pre>   -----syntax to see/ inspect anything in HTML page
+      <%= inspect(@changeset) %>
+      </pre>
+
+
+20-January-2023
+How to check that on what port what is running using netstat tool
+
+command to install netstat - sudo apt update && sudo apt install net-tools 
+command to check what is running now -            netstat -tlpnn 
+command to kill the terminal/port - kill -9 7542    in this 7542 is the PID
+
+23-January-2023
+
+How to use Git stash to save changes locally 
+
+git stash - m "working on ami121"  ==this command removes all the files we have worked on
+To apply gits stash local changes: 
+step1: git stash list   == will give list of all stash then see the {number} and apply it
+step2: git stash apply stash@{0}  ==in this case the number was stash@{0} 
+
+
+
+
+
+Imp Blog Links 
+
+https://blog.appsignal.com/2022/03/29/phoenix-liveview-under-the-hood-the-form-function-component.html
+
+
+
+
+
+
+
+Things to learn 
+
+Docker
+SSH
+

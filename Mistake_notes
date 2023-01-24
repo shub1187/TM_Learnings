@@ -1,0 +1,9 @@
+Mistakes:
+
+ def changeset(cs \\ %__MODULE__{}, changes)  -- cs\\ this is default argument it will take.. as changeset always takes 2 argument but if we wanna call changeset with 1 argument we can call it this way.
+ 
+ while pattern matching alwys check te number of arguments.
+ 
+ %__MODULE__{} -- This is the name of module that is mentioned in top level. Tnest.Model    so it is a model struct
+ 
+ 
